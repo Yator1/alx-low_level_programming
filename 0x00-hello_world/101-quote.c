@@ -3,7 +3,7 @@
 /**
  * main - prints exactly "and that piece of art is useful"
  * =Dora Korpar, 2015-10-19" followed by a new line, to the standard error.
- * return always 0 when succesful
+ * return: always 0 when succesful
  */
 
 int main(void)

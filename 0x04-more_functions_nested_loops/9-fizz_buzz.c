@@ -9,8 +9,6 @@
 
 int main(void)
 {
-	fizz_buzz();
-
 	int i;
 
 	for (i = 1; i <= 100; i++)

@@ -9,7 +9,7 @@
 
 int _strcmp(char *s1, char *s2)
 {
-int n, results,
+int n, results;
 
 n = 0;
 while (s1[n] == s2[n] && s1[n] != '\0')
@@ -17,5 +17,5 @@ while (s1[n] == s2[n] && s1[n] != '\0')
 n++;
 }
 results = s1[n] - s2[n];
-return (value);
+return (results);
 }

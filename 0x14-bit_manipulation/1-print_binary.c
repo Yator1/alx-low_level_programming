@@ -6,8 +6,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int bitSize = (sizeof(unsigned long int) * 8 - 1);
-	unsigned int mask = 1u << bitSize;
+	unsigned int bitSize = (sizeof(unsigned long int) * 8 - 1);
+	unsigned long int mask = 1u << bitSize;
 	int print = 0;
 
 	while (mask > 0)

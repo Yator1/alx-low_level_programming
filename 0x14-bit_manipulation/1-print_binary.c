@@ -8,7 +8,7 @@
 
 void print_binary(unsigned long int n)
 {
-	int bitSize = sizeof(n) * 8;
+	int bitSize = 64;
 	unsigned int mask = 1u << (bitSize - 1);
 	int print = 0;
 

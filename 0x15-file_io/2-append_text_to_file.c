@@ -18,8 +18,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	text_len = strlen(text_content);
 	write_files = fwrite(text_content, 1, text_len, file);
+	fclose(file);
 	if (write_files != text_len)
 		return (-1);
-	fclose(file);
 	return (1);
 }

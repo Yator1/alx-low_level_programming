@@ -37,25 +37,25 @@ int main(int argc, char *argv[])
 	file_to = argv[2];
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
-		exit_error("Error: Can`t read from file", argv[1], 98);
+		exit_error("Error: Can't read from file", argv[1], 98);
 
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
-		exit_error("Error: Can`t write to", argv[2], 99);
+		exit_error("Error: Can't write to", argv[2], 99);
 
 	while ((fd_read = read(fd_from, buffer, BUFF_SIZE)) > 0)
 	{
 		fd_write = write(fd_to, buffer, fd_read);
 		if (fd_write == -1)
-			exit_error("Error: Can`t write to", argv[2], 99);
+			exit_error("Error: Can't write to", argv[2], 99);
 	}
 
 	if (fd_read == -1)
-		exit_error("Error: Can`t read from file", argv[1], 98);
+		exit_error("Error: Can't read from file", argv[1], 98);
 	if (close(fd_from) == -1)
-		exit_error("Error: Can`t close fd FD_VALUE", NULL, 100);
+		exit_error("Error: Can't close fd FD_VALUE", NULL, 100);
 	if (close(fd_to) == -1)
-		exit_error("Error: Can`t close fd FD_VALUE", NULL, 100);
+		exit_error("Error: Can't close fd FD_VALUE", NULL, 100);
 
 	return (0);
 }
